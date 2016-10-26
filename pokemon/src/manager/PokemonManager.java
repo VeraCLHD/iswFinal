@@ -50,6 +50,9 @@ public class PokemonManager {
 		Trainer trainer1 = new Trainer("Jorn","L.");
 		Trainer trainer2 = new Trainer("Jorn","M.");
 		
+		
+		System.out.println("EQUALS" + trainer1.equals(trainer2));
+		
 		pokemon1.setTrainer(trainer1);
 		pokemon2.setTrainer(trainer2);
 		pokemon3.setTrainer(trainer1);

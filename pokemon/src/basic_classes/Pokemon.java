@@ -1,10 +1,15 @@
 package basic_classes;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class Pokemon {
 	private String name;
 	private Type type;
 	private Trainer trainer = null;
 	
+	private boolean swapAllow; 
+	private List<Swap> swaps;
 	
 	//Aufgabe 1.2: Lernziel statische Attribute.
 	private Integer number;
@@ -17,6 +22,8 @@ public class Pokemon {
 		this.setType(type);
 		nextNumber += 1;
 		this.setNumber(nextNumber-1);
+		this.setSwapAllow(true);
+		this.swaps = new ArrayList<Swap>();
 	}
 	
 	
@@ -94,8 +101,23 @@ public class Pokemon {
 	}
 
 
+	public boolean isSwapAllow() {
+		return swapAllow;
+	}
 
 
+	public void setSwapAllow(boolean swapAllow) {
+		this.swapAllow = swapAllow;
+	}
 
 
+	public List<Swap> getSwaps() {
+		return swaps;
+	}
+
+	/*
+	public void setSwaps(List<Swap> swaps) {
+		this.swaps = swaps;
+	}
+	*/
 }
