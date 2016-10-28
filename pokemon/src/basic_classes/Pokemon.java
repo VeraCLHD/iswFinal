@@ -75,14 +75,14 @@ public class Pokemon {
 		// Trainer is set initially
 		if(this.trainer == null){
 			this.trainer = trainer;
-			trainer.addPokemons(this);
+			//trainer.addPokemons(this);
 		} 
 		// Trainer changes.
 		else{
 			this.trainer.getPokemons().remove(this);
 			this.trainer = trainer;
-			trainer.addPokemons(this);
-			System.err.println("The trainer of pokemon " + this.getNumber() + "has been changed.");
+			//trainer.addPokemons(this);
+			System.out.println("The trainer of pokemon " + this.getNumber() + "has been changed.");
 		}
 		
 	}

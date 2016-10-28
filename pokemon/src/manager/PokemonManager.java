@@ -42,7 +42,7 @@ public class PokemonManager {
 	}
 	
 	public static void main(String[] args) {
-		Pokemon pokemon1 = new Pokemon("Sith", Type.Fire);
+		/*Pokemon pokemon1 = new Pokemon("Sith", Type.Fire);
 		Pokemon pokemon2 = new Pokemon("Curt", Type.Water);
 		Pokemon pokemon3 = new Pokemon("John", Type.Poison);
 		Pokemon pokemon4 = new Pokemon("Jimmy", Type.Fire);
@@ -72,7 +72,7 @@ public class PokemonManager {
 		System.out.println(trainer1.getSpecificPokemon(pokemon1));
 		//Alle Pokemons von Type Poison
 		System.out.println(PokemonManager.getPokemonWithType(Type.Poison));
-
+	*/
 	}
 
 }

@@ -6,8 +6,6 @@ public class Trainer {
 	private String firstname;
 	private String lastname;
 	private Integer id;
-	//diese Variable diente nur zu Zwecken der Aufgabe 1.2, wird nicht weiter verwendet
-	private Pokemon pokemon;
 	
 	/*
 	 * Aufgabe 1.3: Für welche Collection habe ich mich entschieden?
@@ -23,6 +21,10 @@ public class Trainer {
 	public Trainer(String firstname, String lastname){
 		this.setFirstname(firstname);
 		this.setLastname(lastname);
+	}
+	
+	public void removePokemon(Pokemon pokemon){
+		this.pokemons.remove(pokemon);
 	}
 	
 	public static void main(String[] args) {
@@ -42,15 +44,6 @@ public class Trainer {
 		this.lastname = lastname;
 	}
 
-
-	public Pokemon getPokemon() {
-		return pokemon;
-	}
-
-	public void setPokemon(Pokemon pokemon) {
-		this.pokemon = pokemon;
-	}
-
 	public HashSet<Pokemon> getPokemons() {
 		return pokemons;
 	}
@@ -61,14 +54,11 @@ public class Trainer {
 	
 	//Neue Pokemons zu einem Trainer hinzufügen
 	public void addPokemons(Pokemon pokemonToAdd){
-		if(pokemonToAdd.getTrainer() == null){
+		if(pokemonToAdd.getTrainer() != this){
 			pokemonToAdd.setTrainer(this);
 			this.getPokemons().add(pokemonToAdd);
-		}
-		else if(pokemonToAdd.getTrainer().equals(this)){
-			this.getPokemons().add(pokemonToAdd);
-		} else{
-			System.err.println("The pokemon couldn't be added to this trainer. It already has another trainer");
+		} else {
+			System.err.println("The trainer " + this.getLastname() +  " already owns " + pokemonToAdd.getName() +  " .");
 		}
 		
 	}
